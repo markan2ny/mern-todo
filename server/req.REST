@@ -1,10 +1,14 @@
 GET http://localhost:3006/api/users
 
 ###
-POST http://localhost:3006/api/users
+POST http://localhost:3006/api/todos
+Content-Type: application/json
+
+
 {
-    "username": "sss"
+    "text": "First Task"
 }
+
 ###
 PUT http://localhost:3006/api/goals/11
 
