@@ -1,0 +1,12 @@
+GET http://localhost:3006/api/users
+
+###
+POST http://localhost:3006/api/users
+{
+    "username": "sss"
+}
+###
+PUT http://localhost:3006/api/goals/11
+
+###
+DELETE  http://localhost:3006/api/goals/11212121212
