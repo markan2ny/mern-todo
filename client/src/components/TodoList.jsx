@@ -1,18 +1,21 @@
-import React from "react";
-import * as Fi from "react-icons/fi";
-const TodoList = ({ todo }) => {
-  return (
-    <div className="flex flex-row justify-between border p-3 items-center mb-2">
-      <span className="uppercase text-slate-600">sample</span>
-      <div className="inline-flex items-center">
-        <button>
-          <Fi.FiTrash className="text-[red] text-lg mr-2" />
-        </button>
-        <button>
-          <Fi.FiCheck className="text-[green] text-lg" />
-        </button>
-      </div>
+import React, { useState } from "react";
+import axios from "axios";
+import { useEffect } from "react";
+import Item from "./Item";
+
+const TodoList = ({ todos, deleteTask }) => {
+  return todos.length === 0 ? (
+    <div className="text-center">
+      <h1 className="text-3xl text-slate-300 ">NO TASK</h1>
     </div>
+  ) : (
+    todos.map((todo) => (
+      <Item
+        todo={todo.text}
+        key={todo._id}
+        deleteTask={() => deleteTask(todo._id)}
+      />
+    ))
   );
 };
 

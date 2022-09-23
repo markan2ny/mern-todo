@@ -4,7 +4,18 @@ GET http://localhost:3006/api/todos
 POST http://localhost:3006/api/todos
 Content-Type: application/json
 
+{
+    "text": "T111"
+}
+
+###
+PUT http://localhost:3006/api/todos/632cf77355295eaaf6fb0ace
+Content-Type: application/json
 
 {
-    "text": "First Task"
+    "text": "Updated Item from"
 }
+###
+DELETE http://localhost:3006/api/todos/632cf7d055295eaaf6fb0ad2
+Content-Type: application/json
+
